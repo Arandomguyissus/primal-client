@@ -1,1 +1,72 @@
-sigmer
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Effect</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .main-button {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            background-color: rgba(0, 0, 0, 0);
+            height: 35px;
+            width: fit-content;
+            border-width: 2px;
+            border-style: solid;
+            border-color: rgba(106, 90, 205, 0.4);
+            border-radius: 4px;
+            color: rgba(255, 255, 255, 1);
+            padding-left: 15px;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-left: 3px;
+            margin-right: 3px;
+            cursor: pointer;
+            transition: border-color 0.5s ease;
+        }
+        @keyframes fadeIn {
+            0% {
+                border-color: rgba(106, 90, 205, 0.4);
+            }
+            100% {
+                border-color: rgba(106, 90, 205, 1);
+            }
+        }
+        @keyframes fadeOut {
+            0% {
+                border-color: rgba(106, 90, 205, 1);
+            }
+            100% {
+                border-color: rgba(106, 90, 205, 0.4);
+            }
+        }
+        .main-button:hover {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .main-button:not(:hover) {
+            animation: fadeOut 1s ease-in-out forwards;
+        }
+        .center-text {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-text">Primal Client</div>
+
+</html>
